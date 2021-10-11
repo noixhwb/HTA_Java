@@ -3,7 +3,7 @@ package Day12_IO;
 import java.io.*;
 
 /*
- * 3. ÆÄÀÏº¹»ç ÇÁ·Î±×·¥À» ¸¸µé¾î º¸¼¼¿ä. (FileReader/FileWriter»ç¿ë) 
+ * 3. íŒŒì¼ë³µì‚¬ í”„ë¡œê·¸ë¨ì„ ë§Œë“¤ì–´ ë³´ì„¸ìš”. (FileReader/FileWriterì‚¬ìš©) 
  */
 
 public class day12_final03 {
@@ -13,7 +13,7 @@ public class day12_final03 {
 		try {
 			fr=new FileReader("upper_test.txt");
 			fw=new FileWriter("upper_test_copy.txt");
-			System.out.println("ÆÄÀÏ ¿­±â ¼º°ø!");
+			System.out.println("íŒŒì¼ ì—´ê¸° ì„±ê³µ!");
 			while (true) {
 				int a = fr.read();
 				if (a == -1) break;
@@ -22,16 +22,16 @@ public class day12_final03 {
 			}
 			fw.close();
 			fr.close();
-			System.out.println("º¹»ç ÆÄÀÏ·Î ÀúÀå ¿Ï·á!");
+			System.out.println("ë³µì‚¬ íŒŒì¼ë¡œ ì €ì¥ ì™„ë£Œ!");
 		} catch (FileNotFoundException e) {
-			System.out.println("¿À·ù! : "+e.getMessage());
+			System.out.println("ì˜¤ë¥˜! : "+e.getMessage());
 		} catch (IOException ie) {
-			System.out.println("¿À·ù!! : "+ie.getMessage()) ;
+			System.out.println("ì˜¤ë¥˜!! : "+ie.getMessage()) ;
 		} finally {
 			try {
 				if (fr != null) fr.close();
 			} catch (IOException ioe) {
-				System.out.println("ÆÄÀÏ ¿­±â ½ÇÆĞ! : "+ioe.getMessage());
+				System.out.println("íŒŒì¼ ì—´ê¸° ì‹¤íŒ¨! : "+ioe.getMessage());
 			}
 		}
 	}
