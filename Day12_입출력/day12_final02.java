@@ -3,14 +3,14 @@ package Day12_IO;
 import java.io.*;
 
 /*
- * 2. ÇÁ·Î±×·¥À» ½ÇÇàÇÏ¸é test.txtÆÄÀÏÀÇ ¸ğµç ³»¿ëÀ» ´ë¹®ÀÚ·Î º¯È¯ÇØ
-      upper_test.txtÆÄÀÏ¿¡ ÀúÀåµÇµµ·Ï ¸¸µé¾î º¸¼¼¿ä.
+ * 2. í”„ë¡œê·¸ë¨ì„ ì‹¤í–‰í•˜ë©´ test.txtíŒŒì¼ì˜ ëª¨ë“  ë‚´ìš©ì„ ëŒ€ë¬¸ìë¡œ ë³€í™˜í•´
+      upper_test.txtíŒŒì¼ì— ì €ì¥ë˜ë„ë¡ ë§Œë“¤ì–´ ë³´ì„¸ìš”.
 
  ## test.txt
  hello!
  my name is hong gil dong.
 
- ==> ÇÁ·Î±×·¥ ½ÇÇàÈÄ upper_test.txtÆÄÀÏ¿¡ ¾Æ·¡Ã³·³ ÀúÀåµÈ´Ù.
+ ==> í”„ë¡œê·¸ë¨ ì‹¤í–‰í›„ upper_test.txtíŒŒì¼ì— ì•„ë˜ì²˜ëŸ¼ ì €ì¥ëœë‹¤.
  HELLO!
  MY NAME IS HONG GIL DONG.
 
@@ -23,7 +23,7 @@ public class day12_final02 {
 		try {
 			fr=new FileReader("test.txt");
 			fw=new FileWriter("upper_test.txt");
-			System.out.println("ÆÄÀÏ ¿­±â ¼º°ø!");
+			System.out.println("íŒŒì¼ ì—´ê¸° ì„±ê³µ!");
 			while (true) {
 				int a = fr.read();
 				if (a == -1) break;
@@ -35,16 +35,16 @@ public class day12_final02 {
 			}
 			fw.close();
 			fr.close();
-			System.out.println("ÆÄÀÏ·Î ÀúÀå ¿Ï·á!");
+			System.out.println("íŒŒì¼ë¡œ ì €ì¥ ì™„ë£Œ!");
 		} catch (FileNotFoundException e) {
-			System.out.println("¿À·ù : "+e.getMessage());
+			System.out.println("ì˜¤ë¥˜ : "+e.getMessage());
 		} catch (IOException ie) {
-			System.out.println("¿À·ù : "+ie.getMessage());
+			System.out.println("ì˜¤ë¥˜ : "+ie.getMessage());
 		} finally {
 			try {
 				if (fr != null) fr.close();
 			} catch (IOException ioe) {
-				System.out.println("ÆÄÀÏ ¿­±â ½ÇÆĞ! "+ioe.getMessage());
+				System.out.println("íŒŒì¼ ì—´ê¸° ì‹¤íŒ¨! "+ioe.getMessage());
 			}
 		}
 	}
