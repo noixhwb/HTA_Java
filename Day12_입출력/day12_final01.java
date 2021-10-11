@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Scanner;
 
 /*
- * 1. ¿µ¹®À¸·Î Å°º¸µå·Î ¹®ÀÚ¿­À» ÀÔ·Â¹Ş¾Æ test.txtÆÄÀÏ·Î ÀúÀåÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼º
+ * 1. ì˜ë¬¸ìœ¼ë¡œ í‚¤ë³´ë“œë¡œ ë¬¸ìì—´ì„ ì…ë ¥ë°›ì•„ test.txtíŒŒì¼ë¡œ ì €ì¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±
  */
 
 public class day12_final01 {
@@ -13,15 +13,15 @@ public class day12_final01 {
 		FileWriter fw=null;
 		try {
 			fw=new FileWriter("test.txt");
-			System.out.println("¿µ¹®À¸·Î ¹®ÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+			System.out.println("ì˜ë¬¸ìœ¼ë¡œ ë¬¸ìë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 			String str1 = scan.nextLine();
 			String str2 = scan.nextLine();
 			fw.write(str1+"\n"+str2);
 			fw.flush();
 			fw.close();
-			System.out.println("ÆÄÀÏ·Î ÀúÀå ¿Ï·á!");
+			System.out.println("íŒŒì¼ë¡œ ì €ì¥ ì™„ë£Œ!");
 		} catch (IOException ie){
-			System.out.println("ÆÄÀÏ·Î ÀúÀå ¿À·ù! "+ie.getMessage());
+			System.out.println("íŒŒì¼ë¡œ ì €ì¥ ì˜¤ë¥˜! "+ie.getMessage());
 		}
 		
 		scan.close();
